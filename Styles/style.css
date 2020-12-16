@@ -1,14 +1,17 @@
 @charset "utf-8";
 /* CSS Document */
 
-* {
-  margin: 0;
-  padding: 0;
+
+body {
+    font-size: 14px;
+  font-family: arial, sans-serif;
+  color: #222;
+    height: 100vh; margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 
-
-body,
 input,
 button {
   font-size: 14px;
@@ -155,6 +158,13 @@ a:hover {
   color: black;
 }
 
+/*@media only screen and (max-width:768px) {
+    body {
+        width: 90%;
+        height: 90%;
+    }
+}*/
+
 #user-link {
   color: #000;
   text-decoration: none;
@@ -185,17 +195,7 @@ a:hover {
   box-shadow: 0 1px 0 rgba(0, 0, 0, .15);
 }
 
-@media all and (max-width: 600px) {
 
-  .container {
-    flex-wrap: wrap;
-  }
-
-  .container>li {
-    flex-basis: 50%;
-  }
-
-}
 
 button, input[type="submit"], input[type="reset"] {
 	background: none;
@@ -207,15 +207,15 @@ button, input[type="submit"], input[type="reset"] {
 	outline: inherit;
 }
 
-@media all and (max-width: 400px) {
-  .container>li {
+/*@media all and (max-width: 400px) {
+  main {
     flex-basis: 100%;
   }
 
-  .search {
+  form {
     order: 1;
   }
-}
+}*/
 
 #nav {
   padding: 6px;
@@ -224,6 +224,7 @@ button, input[type="submit"], input[type="reset"] {
   height: 60px;
   flex-shrink: 0;
   box-sizing: border-box;
+    width: 100%;
 }
 
 
@@ -248,6 +249,7 @@ svg:hover {
   height: 20px;
   vertical-align: middle;
   overflow: hidden;
+     margin-right: auto;
 }
 
 #google-search {
@@ -256,6 +258,7 @@ svg:hover {
   height: 20px;
   overflow: hidden;
   color: #9aa0a6;
+     margin-left: auto;
   
 }
 
@@ -268,6 +271,7 @@ svg:hover {
 #footer {
   margin-top: auto;
 	 background: #f2f2f2;
+   
 	
 	
 }
@@ -280,27 +284,38 @@ svg:hover {
 	
 }
 
+
 #footer-div div {
   justify-content: space-evenly;
   display: flex;
   flex-wrap: wrap;
+
 }
 
 #footer-div div > a {
   display: block;
   white-space: nowrap;
   padding: 15px;
+   
 }
+
+#1_2-footer {
+    left: 100%;
+}
+
 
 main {
-	height: 100vh; margin: 0;
+	width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-#main {
+/*#main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+}*/
 
 #google-logo {
   max-height: 100%;
@@ -320,6 +335,7 @@ main {
   display: block;
   margin-top: auto;
 	left: 120%;
+   
 }
 
 #img-containers {
@@ -340,12 +356,12 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 24px;
-  
+  vertical-align: middle;
   padding: 5px 8px 0 16px;
   height: 44px;
   max-width: 584px;
   margin:0 auto;
-  width:575px;
+  width:50%;
   border:1px solid #dcdcdc;
   margin-bottom: 40px;
   margin-top: 20px;
@@ -381,4 +397,10 @@ main {
 	background: #f2f2f2;
 	padding: 10px;
 	color: #222;
+    text-decoration: none;
+}
+
+#div-below-search > a:hover {
+text-decoration: none;
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
 }
