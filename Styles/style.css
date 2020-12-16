@@ -6,6 +6,8 @@
   padding: 0;
 }
 
+
+
 body,
 input,
 button {
@@ -16,6 +18,7 @@ button {
 
 a {
   text-decoration: none;
+  color: #222;
 }
 
 a:hover {
@@ -194,6 +197,16 @@ a:hover {
 
 }
 
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 @media all and (max-width: 400px) {
   .container>li {
     flex-basis: 100%;
@@ -246,13 +259,17 @@ svg:hover {
   
 }
 
+#google-search:hover {
+  background-color: rgba(95, 99, 104, 0.24);
+  outline: none;
+  border-radius: 50%;
+}
+
 #footer {
-  background: #f2f2f2;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  display: block;
-  bottom: 0;
-  width: 100%;
+  margin-top: auto;
+	 background: #f2f2f2;
+	
+	
 }
 
 #footer-div {
@@ -260,6 +277,7 @@ svg:hover {
   display: flex;
   flex-wrap: wrap;
   padding: 0 20px;
+	
 }
 
 #footer-div div {
@@ -268,17 +286,20 @@ svg:hover {
   flex-wrap: wrap;
 }
 
-#footer-div div>p {
+#footer-div div > a {
   display: block;
   white-space: nowrap;
   padding: 15px;
+}
+
+main {
+	height: 100vh; margin: 0;
 }
 
 #main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 #google-logo {
@@ -297,7 +318,8 @@ svg:hover {
   right: -32px;
   bottom: 12px;
   display: block;
-  float: right;
+  margin-top: auto;
+	left: 120%;
 }
 
 #img-containers {
@@ -309,7 +331,7 @@ svg:hover {
   height: calc(100% - 560px);
   flex-shrink: 0;
   box-sizing: border-box;
-  margin-top: 160px;
+  margin-top: 10px;
 }
 
 #search-form {
@@ -318,7 +340,7 @@ svg:hover {
   align-items: center;
   justify-content: center;
   border-radius: 24px;
-  width: 100%;
+  
   padding: 5px 8px 0 16px;
   height: 44px;
   max-width: 584px;
@@ -346,5 +368,17 @@ svg:hover {
   width:500px;
   font-size:16px;
   outline: none;
- 
+}
+
+#div-below-search {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+#div-below-search > a {
+	margin: 10px;
+	background: #f2f2f2;
+	padding: 10px;
+	color: #222;
 }

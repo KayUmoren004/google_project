@@ -1,6 +1,9 @@
 <!doctype html>
 <html>
-	<header id="header">
+	
+	
+	<main id="main">
+		<header id="header">
 		<meta charset="utf-8">
   		<title>Google</title>
 		<link rel="icon" type="image/png" href="Images/favion.png" />
@@ -40,7 +43,7 @@
 					  <a href="#" id="user-link">
 						<img alt="User Image"
 		   					id="user-image"
-		    					src="Images/favion.png" />
+		    					src="https://avatars1.githubusercontent.com/u/75347268?s=460&u=c496ef6663ad37afcc3436fba87c228f16f20047&v=4" />
 					  </a>
 					</div>	
 				 </div>
@@ -49,50 +52,66 @@
 		</div>
 	</div>
     </nav>
-	
-	<main id="main">
 		<div id="img-containers">
 			<div style="height: calc(100% - 180px)"></div>
-			<div id="logo-container">
+			<div  id="logo-container">
 				<img 
 			 id="google-logo"
 			 alt="Google Logo"
 			 src="Images/google-logo.png" />
-			</div>
-		<img
+				<img
 			 id="share-img"
 			 alt="Share Button"
 			 src="Images/download.png" />
+			</div>
+		
 		</div>
-		<form action="#" id="search-form">
-			<a href="#">
+		<form action="https://www.google.com/search" id="search-form" method="get" name="searchform" target="_parent">
+			<button type="submit" value="search-button" title="Search by Voice" id="search-button">
 				 <svg focusable="false" title="Search" id="google-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
-			</a>
-			<input id="search-bar" type="search" name="search" required autocomplete="on" title="Search">
-			<a href="#" title="Search by Voice">
-				 <svg class="HPVvwb" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z" fill="#4285f4"></path><path d="m11 18.08h2v3.92h-2z" fill="#34a853"></path><path d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z" fill="#f4b400"></path><path d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z" fill="#ea4335"></path></svg>
-			</a>
+			</button>
+			<input id="search-bar" type="search" required autofocus autocomplete="on" title="Search" name="q">
+			<a href="#">
+				 <svg class="HPVvwb" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z" fill="#4285f4"></path><path d="m11 18.08h2v3.92h-2z" fill="#34a853"></path><path d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z" fill="#f4b400"></path><path d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z" fill="#ea4335"></path></svg></a>
+			
+			<script>
+				// Get the input field
+var input = document.getElementById("search-bar");
+
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("search-button").click();
+  }
+});
+			</script>
+
 		</form>
 		
 		<div id="div-below-search">
-			<p class="below-search">Google Search</p>
-			<p class="below-search">I'm Feeling Lucky</p>
+			<a href="#" class="below-search">Google Search</a>
+			<a href="#" class="below-search">I'm Feeling Lucky</a>
 		</div>
-	</main>
-	
-	<footer id="footer">
+		<footer id="footer">
 		<div id="footer-div">
 			<div id="1_2-footer">
-			<p>Adertising</p>
-			<p>Business</p>
-			<p>How Search Works</p>
+			<a href="#">Advertising</a>
+			<a href="#">Business</a>
+			<a href="#">How Search Works</a>
 		</div>
 		
 		<div id="2_2-footer">
-			<p>Privacy</p>
-			<p>Terms</p>
-			<p>Settings</p>
+			<a href="#">Privacy</a>
+			<a href="#">Terms</a>
+			<a href="#">Settings</a>
 		</div>
 		</div>
 	</footer>
+	</main>
+	
+	
 </html>
